@@ -1,0 +1,15 @@
+api:
+  image: fabricioveronez/pedelogo-catalogo:v1
+  serviceType: NodePort
+  ingress:
+  - aulakubedev.com.br
+  - api.aulakubedev.com.br
+
+mongodb:
+  auth:
+    username: mongouser
+    password: mongopwd
+    rootPassword: mongoRoot
+    database: admin
+  persistence:
+    enabled: false

@@ -1,0 +1,882 @@
+
+fernando@debian10x64:~$ helm upgrade minhaapi /home/fernando/cursos/helm-cursos/DevOps-Pro-Helm/009-Material-chart-novo/api-produto --dry-run --debug
+upgrade.go:142: [debug] preparing upgrade for minhaapi
+upgrade.go:524: [debug] copying values from minhaapi (v5) to new release.
+upgrade.go:150: [debug] performing update for minhaapi
+upgrade.go:313: [debug] dry run for minhaapi
+Release "minhaapi" has been upgraded. Happy Helming!
+NAME: minhaapi
+LAST DEPLOYED: Thu Jan 26 23:17:39 2023
+NAMESPACE: default
+STATUS: pending-upgrade
+REVISION: 6
+TEST SUITE: None
+USER-SUPPLIED VALUES:
+mongodb:
+  existSecret: umsecret
+
+COMPUTED VALUES:
+api:
+  image: fabricioveronez/pedelogo-catalogo:v1
+  ingress:
+  - aulakubedev.com.br
+  - api.aulakubedev.com.br
+  serviceType: ClusterIP
+mongodb:
+  affinity: {}
+  annotations: {}
+  arbiter:
+    affinity: {}
+    annotations: {}
+    args: []
+    command: []
+    configuration: ""
+    containerPorts:
+      mongodb: 27017
+    containerSecurityContext:
+      enabled: true
+      runAsNonRoot: true
+      runAsUser: 1001
+    customLivenessProbe: {}
+    customReadinessProbe: {}
+    customStartupProbe: {}
+    enabled: true
+    existingConfigmap: ""
+    extraEnvVars: []
+    extraEnvVarsCM: ""
+    extraEnvVarsSecret: ""
+    extraFlags: []
+    extraVolumeMounts: []
+    extraVolumes: []
+    hostAliases: []
+    initContainers: []
+    labels: {}
+    lifecycleHooks: {}
+    livenessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 30
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 10
+    nodeAffinityPreset:
+      key: ""
+      type: ""
+      values: []
+    nodeSelector: {}
+    pdb:
+      create: false
+      maxUnavailable: ""
+      minAvailable: 1
+    podAffinityPreset: ""
+    podAnnotations: {}
+    podAntiAffinityPreset: soft
+    podLabels: {}
+    podManagementPolicy: OrderedReady
+    podSecurityContext:
+      enabled: true
+      fsGroup: 1001
+      sysctls: []
+    priorityClassName: ""
+    readinessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 5
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 10
+    resources:
+      limits: {}
+      requests: {}
+    runtimeClassName: ""
+    schedulerName: ""
+    service:
+      annotations: {}
+      extraPorts: []
+      nameOverride: ""
+      ports:
+        mongodb: 27017
+    sidecars: []
+    startupProbe:
+      enabled: false
+      failureThreshold: 30
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    terminationGracePeriodSeconds: ""
+    tolerations: []
+    topologySpreadConstraints: []
+    updateStrategy:
+      type: RollingUpdate
+  architecture: standalone
+  args: []
+  auth:
+    database: admin
+    databases: []
+    enabled: true
+    existingSecret: ""
+    password: mongopwd
+    passwords: []
+    replicaSetKey: ""
+    rootPassword: mongoRoot
+    rootUser: root
+    username: mongouser
+    usernames: []
+  clusterDomain: cluster.local
+  command: []
+  common:
+    exampleValue: common-chart
+    global:
+      imagePullSecrets: []
+      imageRegistry: ""
+      namespaceOverride: ""
+      storageClass: ""
+  commonAnnotations: {}
+  commonLabels: {}
+  configuration: ""
+  containerPorts:
+    mongodb: 27017
+  containerSecurityContext:
+    enabled: true
+    runAsNonRoot: true
+    runAsUser: 1001
+  customLivenessProbe: {}
+  customReadinessProbe: {}
+  customStartupProbe: {}
+  diagnosticMode:
+    args:
+    - infinity
+    command:
+    - sleep
+    enabled: false
+  directoryPerDB: false
+  disableJavascript: false
+  disableSystemLog: false
+  enableIPv6: false
+  enableJournal: true
+  existSecret: umsecret
+  existingConfigmap: ""
+  externalAccess:
+    autoDiscovery:
+      enabled: false
+      image:
+        digest: ""
+        pullPolicy: IfNotPresent
+        pullSecrets: []
+        registry: docker.io
+        repository: bitnami/kubectl
+        tag: 1.25.5-debian-11-r14
+      resources:
+        limits: {}
+        requests: {}
+    enabled: false
+    hidden:
+      enabled: false
+      service:
+        annotations: {}
+        domain: ""
+        externalTrafficPolicy: Local
+        extraPorts: []
+        loadBalancerClass: ""
+        loadBalancerIPs: []
+        loadBalancerSourceRanges: []
+        nodePorts: []
+        portName: mongodb
+        ports:
+          mongodb: 27017
+        sessionAffinity: None
+        sessionAffinityConfig: {}
+        type: LoadBalancer
+    service:
+      annotations: {}
+      domain: ""
+      externalTrafficPolicy: Local
+      extraPorts: []
+      loadBalancerClass: ""
+      loadBalancerIPs: []
+      loadBalancerSourceRanges: []
+      nodePorts: []
+      portName: mongodb
+      ports:
+        mongodb: 27017
+      sessionAffinity: None
+      sessionAffinityConfig: {}
+      type: LoadBalancer
+  extraDeploy: []
+  extraEnvVars: []
+  extraEnvVarsCM: ""
+  extraEnvVarsSecret: ""
+  extraFlags: []
+  extraVolumeMounts: []
+  extraVolumes: []
+  fullnameOverride: ""
+  global:
+    imagePullSecrets: []
+    imageRegistry: ""
+    namespaceOverride: ""
+    storageClass: ""
+  hidden:
+    affinity: {}
+    annotations: {}
+    args: []
+    command: []
+    configuration: ""
+    containerPorts:
+      mongodb: 27017
+    containerSecurityContext:
+      enabled: true
+      runAsNonRoot: true
+      runAsUser: 1001
+    customLivenessProbe: {}
+    customReadinessProbe: {}
+    customStartupProbe: {}
+    enabled: false
+    existingConfigmap: ""
+    extraEnvVars: []
+    extraEnvVarsCM: ""
+    extraEnvVarsSecret: ""
+    extraFlags: []
+    extraVolumeMounts: []
+    extraVolumes: []
+    hostAliases: []
+    initContainers: []
+    labels: {}
+    lifecycleHooks: {}
+    livenessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 30
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 10
+    nodeAffinityPreset:
+      key: ""
+      type: ""
+      values: []
+    nodeSelector: {}
+    pdb:
+      create: false
+      maxUnavailable: ""
+      minAvailable: 1
+    persistence:
+      accessModes:
+      - ReadWriteOnce
+      annotations: {}
+      enabled: true
+      medium: ""
+      mountPath: /bitnami/mongodb
+      size: 8Gi
+      storageClass: ""
+      subPath: ""
+      volumeClaimTemplates:
+        dataSource: {}
+        requests: {}
+        selector: {}
+    podAffinityPreset: ""
+    podAnnotations: {}
+    podAntiAffinityPreset: soft
+    podLabels: {}
+    podManagementPolicy: OrderedReady
+    podSecurityContext:
+      enabled: true
+      fsGroup: 1001
+      sysctls: []
+    priorityClassName: ""
+    readinessProbe:
+      enabled: true
+      failureThreshold: 6
+      initialDelaySeconds: 5
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 10
+    replicaCount: 1
+    resources:
+      limits: {}
+      requests: {}
+    runtimeClassName: ""
+    schedulerName: ""
+    service:
+      annotations: {}
+      extraPorts: []
+      portName: mongodb
+      ports:
+        mongodb: 27017
+    sidecars: []
+    startupProbe:
+      enabled: false
+      failureThreshold: 30
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    terminationGracePeriodSeconds: ""
+    tolerations: []
+    topologySpreadConstraints: []
+    updateStrategy:
+      type: RollingUpdate
+  hostAliases: []
+  image:
+    debug: false
+    digest: ""
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    registry: docker.io
+    repository: bitnami/mongodb
+    tag: 6.0.4-debian-11-r0
+  initContainers: []
+  initdbScripts: {}
+  initdbScriptsConfigMap: ""
+  kubeVersion: ""
+  labels: {}
+  lifecycleHooks: {}
+  livenessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 30
+    periodSeconds: 20
+    successThreshold: 1
+    timeoutSeconds: 10
+  metrics:
+    args: []
+    command: []
+    containerPort: 9216
+    customLivenessProbe: {}
+    customReadinessProbe: {}
+    customStartupProbe: {}
+    enabled: false
+    extraFlags: ""
+    image:
+      digest: ""
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+      registry: docker.io
+      repository: bitnami/mongodb-exporter
+      tag: 0.36.0-debian-11-r6
+    livenessProbe:
+      enabled: true
+      failureThreshold: 3
+      initialDelaySeconds: 15
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 5
+    password: ""
+    prometheusRule:
+      additionalLabels: {}
+      enabled: false
+      namespace: ""
+      rules: []
+    readinessProbe:
+      enabled: true
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      limits: {}
+      requests: {}
+    service:
+      annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: '{{ .Values.metrics.service.ports.metrics }}'
+        prometheus.io/scrape: "true"
+      extraPorts: []
+      ports:
+        metrics: 9216
+      type: ClusterIP
+    serviceMonitor:
+      enabled: false
+      honorLabels: false
+      interval: 30s
+      jobLabel: ""
+      labels: {}
+      metricRelabelings: []
+      namespace: ""
+      relabelings: []
+      scrapeTimeout: ""
+      selector: {}
+    startupProbe:
+      enabled: false
+      failureThreshold: 30
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    username: ""
+  nameOverride: ""
+  namespaceOverride: ""
+  nodeAffinityPreset:
+    key: ""
+    type: ""
+    values: []
+  nodeSelector: {}
+  pdb:
+    create: false
+    maxUnavailable: ""
+    minAvailable: 1
+  persistence:
+    accessModes:
+    - ReadWriteOnce
+    annotations: {}
+    enabled: false
+    existingClaim: ""
+    medium: ""
+    mountPath: /bitnami/mongodb
+    resourcePolicy: ""
+    size: 8Gi
+    storageClass: ""
+    subPath: ""
+    volumeClaimTemplates:
+      dataSource: {}
+      requests: {}
+      selector: {}
+  podAffinityPreset: ""
+  podAnnotations: {}
+  podAntiAffinityPreset: soft
+  podLabels: {}
+  podManagementPolicy: OrderedReady
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+    sysctls: []
+  podSecurityPolicy:
+    allowPrivilegeEscalation: false
+    create: false
+    privileged: false
+    spec: {}
+  priorityClassName: ""
+  rbac:
+    create: false
+    rules: []
+  readinessProbe:
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  replicaCount: 2
+  replicaSetConfigurationSettings:
+    configuration: {}
+    enabled: false
+  replicaSetHostnames: true
+  replicaSetName: rs0
+  resources:
+    limits: {}
+    requests: {}
+  runtimeClassName: ""
+  schedulerName: ""
+  service:
+    annotations: {}
+    clusterIP: ""
+    externalIPs: []
+    externalTrafficPolicy: Local
+    extraPorts: []
+    loadBalancerClass: ""
+    loadBalancerIP: ""
+    loadBalancerSourceRanges: []
+    nameOverride: ""
+    nodePorts:
+      mongodb: ""
+    portName: mongodb
+    ports:
+      mongodb: 27017
+    sessionAffinity: None
+    sessionAffinityConfig: {}
+    type: ClusterIP
+  serviceAccount:
+    annotations: {}
+    automountServiceAccountToken: true
+    create: true
+    name: ""
+  sidecars: []
+  startupProbe:
+    enabled: false
+    failureThreshold: 30
+    initialDelaySeconds: 5
+    periodSeconds: 20
+    successThreshold: 1
+    timeoutSeconds: 10
+  systemLogVerbosity: 0
+  terminationGracePeriodSeconds: ""
+  tls:
+    arbiter:
+      existingSecret: ""
+    autoGenerated: true
+    caCert: ""
+    caKey: ""
+    enabled: false
+    existingSecret: ""
+    extraDnsNames: []
+    hidden:
+      existingSecrets: []
+    image:
+      digest: ""
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+      registry: docker.io
+      repository: bitnami/nginx
+      tag: 1.23.3-debian-11-r15
+    mode: requireTLS
+    replicaset:
+      existingSecrets: []
+    resources:
+      limits: {}
+      requests: {}
+    standalone:
+      existingSecret: ""
+  tolerations: []
+  topologyKey: ""
+  topologySpreadConstraints: []
+  updateStrategy:
+    type: RollingUpdate
+  useStatefulSet: false
+  volumePermissions:
+    enabled: false
+    image:
+      digest: ""
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+      registry: docker.io
+      repository: bitnami/bitnami-shell
+      tag: 11-debian-11-r74
+    resources:
+      limits: {}
+      requests: {}
+    securityContext:
+      runAsUser: 0
+
+HOOKS:
+MANIFEST:
+---
+# Source: api-produto/charts/mongodb/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: minhaapi-mongodb
+  namespace: "default"
+  labels:
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-13.6.4
+    app.kubernetes.io/instance: minhaapi
+    app.kubernetes.io/managed-by: Helm
+secrets:
+  - name: minhaapi-mongodb
+automountServiceAccountToken: true
+---
+# Source: api-produto/charts/mongodb/templates/secrets.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minhaapi-mongodb
+  namespace: default
+  labels:
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-13.6.4
+    app.kubernetes.io/instance: minhaapi
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: mongodb
+type: Opaque
+data:
+  mongodb-root-password: "bW9uZ29Sb290"
+  mongodb-passwords: "bW9uZ29wd2Q="
+---
+# Source: api-produto/templates/api-secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+    name: minhaapi-api-secret
+data:
+    Mongo__User: "bW9uZ291c2Vy"
+    Mongo__Password: "bW9uZ29wd2Q="
+---
+# Source: api-produto/charts/mongodb/templates/common-scripts-cm.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: minhaapi-mongodb-common-scripts
+  namespace: "default"
+  labels:
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-13.6.4
+    app.kubernetes.io/instance: minhaapi
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: mongodb
+data:
+  startup-probe.sh: |
+    #!/bin/bash
+    mongosh  $TLS_OPTIONS --port $MONGODB_PORT_NUMBER --eval 'db.hello().isWritablePrimary || db.hello().secondary' | grep 'true'
+  readiness-probe.sh: |
+    #!/bin/bash
+    # Run the proper check depending on the version
+    [[ $(mongod -version | grep "db version") =~ ([0-9]+\.[0-9]+\.[0-9]+) ]] && VERSION=${BASH_REMATCH[1]}
+    . /opt/bitnami/scripts/libversion.sh
+    VERSION_MAJOR="$(get_sematic_version "$VERSION" 1)"
+    VERSION_MINOR="$(get_sematic_version "$VERSION" 2)"
+    VERSION_PATCH="$(get_sematic_version "$VERSION" 3)"
+    if [[ ( "$VERSION_MAJOR" -ge 5 ) || ( "$VERSION_MAJOR" -ge 4 && "$VERSION_MINOR" -ge 4 && "$VERSION_PATCH" -ge 2 ) ]]; then
+        mongosh $TLS_OPTIONS --port $MONGODB_PORT_NUMBER --eval 'db.hello().isWritablePrimary || db.hello().secondary' | grep 'true'
+    else
+        mongosh  $TLS_OPTIONS --port $MONGODB_PORT_NUMBER --eval 'db.isMaster().ismaster || db.isMaster().secondary' | grep 'true'
+    fi
+  ping-mongodb.sh: |
+    #!/bin/bash
+    mongosh  $TLS_OPTIONS --port $MONGODB_PORT_NUMBER --eval "db.adminCommand('ping')"
+---
+# Source: api-produto/templates/api-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: minhaapi-api-configmap
+data:
+    Mongo__Host: minhaapi-mongodb
+    Mongo__DataBase: admin
+---
+# Source: api-produto/charts/mongodb/templates/standalone/svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: minhaapi-mongodb
+  namespace: "default"
+  labels:
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-13.6.4
+    app.kubernetes.io/instance: minhaapi
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: mongodb
+spec:
+  type: ClusterIP
+  sessionAffinity: None
+  ports:
+    - name: "mongodb"
+      port: 27017
+      targetPort: mongodb
+      nodePort: null
+  selector:
+    app.kubernetes.io/name: mongodb
+    app.kubernetes.io/instance: minhaapi
+    app.kubernetes.io/component: mongodb
+---
+# Source: api-produto/templates/api-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: minhaapi-api-service
+spec:
+  selector:
+    app: minhaapi-api
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
+---
+# Source: api-produto/templates/mongodb-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: minhaapi-mongodb
+spec:
+  selector:
+    app: minhaapi-mongodb
+  ports:
+  - port: 27017
+    targetPort: 27017
+---
+# Source: api-produto/charts/mongodb/templates/standalone/dep-sts.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minhaapi-mongodb
+  namespace: "default"
+  labels:
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-13.6.4
+    app.kubernetes.io/instance: minhaapi
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: mongodb
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: mongodb
+      app.kubernetes.io/instance: minhaapi
+      app.kubernetes.io/component: mongodb
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: mongodb
+        helm.sh/chart: mongodb-13.6.4
+        app.kubernetes.io/instance: minhaapi
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/component: mongodb
+    spec:
+
+      serviceAccountName: minhaapi-mongodb
+      affinity:
+        podAffinity:
+
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/name: mongodb
+                    app.kubernetes.io/instance: minhaapi
+                    app.kubernetes.io/component: mongodb
+                topologyKey: kubernetes.io/hostname
+              weight: 1
+        nodeAffinity:
+
+      securityContext:
+        fsGroup: 1001
+        sysctls: []
+
+      containers:
+        - name: mongodb
+          image: docker.io/bitnami/mongodb:6.0.4-debian-11-r0
+          imagePullPolicy: "IfNotPresent"
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1001
+          env:
+            - name: BITNAMI_DEBUG
+              value: "false"
+            - name: MONGODB_EXTRA_USERNAMES
+              value: "mongouser"
+            - name: MONGODB_EXTRA_DATABASES
+              value: "admin"
+            - name: MONGODB_EXTRA_PASSWORDS
+              valueFrom:
+                secretKeyRef:
+                  name: minhaapi-mongodb
+                  key: mongodb-passwords
+            - name: MONGODB_ROOT_USER
+              value: "root"
+            - name: MONGODB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: minhaapi-mongodb
+                  key: mongodb-root-password
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "no"
+            - name: MONGODB_SYSTEM_LOG_VERBOSITY
+              value: "0"
+            - name: MONGODB_DISABLE_SYSTEM_LOG
+              value: "no"
+            - name: MONGODB_DISABLE_JAVASCRIPT
+              value: "no"
+            - name: MONGODB_ENABLE_JOURNAL
+              value: "yes"
+            - name: MONGODB_PORT_NUMBER
+              value: "27017"
+            - name: MONGODB_ENABLE_IPV6
+              value: "no"
+            - name: MONGODB_ENABLE_DIRECTORY_PER_DB
+              value: "no"
+          ports:
+            - name: mongodb
+              containerPort: 27017
+          livenessProbe:
+            failureThreshold: 6
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            successThreshold: 1
+            timeoutSeconds: 10
+            exec:
+              command:
+                - /bitnami/scripts/ping-mongodb.sh
+          readinessProbe:
+            failureThreshold: 6
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
+            exec:
+              command:
+                - /bitnami/scripts/readiness-probe.sh
+          resources:
+            limits: {}
+            requests: {}
+          volumeMounts:
+            - name: datadir
+              mountPath: /bitnami/mongodb
+              subPath:
+            - name: common-scripts
+              mountPath: /bitnami/scripts
+      volumes:
+        - name: common-scripts
+          configMap:
+            name: minhaapi-mongodb-common-scripts
+            defaultMode: 0550
+        - name: datadir
+          emptyDir: {}
+---
+# Source: api-produto/templates/api-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minhaapi-api-deployment
+spec:
+  selector:
+    matchLabels:
+      app: minhaapi-api
+  template:
+    metadata:
+      labels:
+        app: minhaapi-api
+    spec:
+      containers:
+      - name: api
+        image: fabricioveronez/pedelogo-catalogo:v1
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "500m"
+          limits:
+            memory: "64Mi"
+            cpu: "500m"
+        envFrom:
+          - configMapRef:
+              name: minhaapi-api-configmap
+          - secretRef:
+              name: minhaapi-api-secret
+---
+# Source: api-produto/templates/api-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minhaapi-api-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - host: aulakubedev.com.br
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+            service:
+              name: minhaapi-api-service
+              port:
+                number: 80
+  - host: api.aulakubedev.com.br
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+            service:
+              name: minhaapi-api-service
+              port:
+                number: 80
+
+NOTES:
+Instalado
